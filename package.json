@@ -1,0 +1,29 @@
+{
+  "name": "joi-enums-extension",
+  "version": "0.0.1",
+  "description": "Joi extensions for enums mapping.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab -t 100 -a code -L"
+  },
+  "repository": "git://github.com/westyler/joi-enums-extension.git",
+  "keywords": [
+    "joi",
+    "schema",
+    "extension",
+    "validation",
+    "map",
+    "enums"
+  ],
+  "author": "Wes Tyler (wtyler@xogrp.com)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/westyler/joi-enums-extension/issues"
+  },
+  "homepage": "https://github.com/westyler/joi-enums-extension#readme",
+  "devDependencies": {
+    "code": "^4.0.0",
+    "joi": "^10.2.0",
+    "lab": "^11.2.2"
+  }
+}

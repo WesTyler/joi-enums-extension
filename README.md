@@ -2,6 +2,9 @@
 
 Joi extensions for enums mapping.
 
+[![NSP Status](https://nodesecurity.io/orgs/westyler/projects/be6a2f14-db5f-48f1-a9ab-8f74207670e1/badge)](https://nodesecurity.io/orgs/westyler/projects/be6a2f14-db5f-48f1-a9ab-8f74207670e1)
+[![Known Vulnerabilities](https://snyk.io/test/github/westyler/joi-enums-extension/badge.svg)](https://snyk.io/test/github/westyler/joi-enums-extension)
+
 Lead Maintainer: [Wes Tyler](https://github.com/westyler)
 
 # Usage

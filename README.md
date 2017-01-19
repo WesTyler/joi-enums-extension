@@ -21,4 +21,4 @@ const schema = Joi.number().map({
 ```
 
 # API
-See the [API Reference](https://github.com/westyler/joi-enums-extension/master/API.md).
+See the [API Reference](https://github.com/westyler/joi-enums-extension/blob/master/API.md).

@@ -13,7 +13,7 @@ const BaseJoi = require('joi');
 const Enums = require('joi-enums-extension');
 const Joi = BaseJoi.extend(Enums);
 
-const schema = Joi.number().integer().map({
+const schema = Joi.number().map({
     admin : 1,
     vendor: 2,
     client: 3

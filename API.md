@@ -16,7 +16,7 @@ const enums = {
     vendor: 2,
     client: 3
 }; 
-const schema = Joi.number().integer().map(enums);
+const schema = Joi.number().map(enums);
 
 schema.validate(1);         // { error: null, value: 1 }
 schema.validate('admin');   // { error: null, value: 1 }

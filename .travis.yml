@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '4.4'
+- '4'
+- '6'
+- node
+sudo: false
+before_install: npm install -g npm@'>=2.13.5'
+deploy:
+  provider: npm
+  email: wtyler@xogrp.com
+  api_key:
+    secure: Mq4cSJA6WbOxJ180QoApxfItA6Jn2UpRQHYqfX9o8hXliIUY4RRCs4FCVvCO4bdq6f6gIHjhmqxvVCo2FL5NDBd5K28CH2rvTbP9PYMnnyTtpbr7GOlzDV0glKYqFRbwQRU7H4P3dWU/sgTDp8AWD49VcpugyAqjJsSrLXqX28I09ABdOuc+vzeGcoN2l1ELcm3xwU+D7h924Aqhs0sF0DlNv+M5z+g7y1x5LzvU6ccvc5hcasPUCC6tLDlNzX4CjmnRDdGm1W7Ckh0kFPOgUGZhBhWsQHeETKIcrIMzpJ0Ij7p9Pc9QNY80Mx3l9Q9kW73Wif9rst7fuwa4tTe0DjRUElRC132qs/GHdKD6NfceVqnrkFQjDUHyLHyRdaBTkVf0XNlqTqF1AF3F+ROj2tRtvMVtwNYnlTz0VCDL/SlO/QJWgyo9bEN19jG/+dKdgtvCcyu97c1kEtFpoYSBq0e97GgEL69jHJqVOCftp0YaYFhMzMs4JRevXj5zibqEN6xAygHtSJTVdBrif/WkrSbEe+nOYS3ibskqg6TWOSjHh7uxcgFZEbPwVBE7+nuPsVkSF1ul/APwbyoMRH4EhPAy1y4vpHSzkUHNB27p4x/wDWRP9z/5uKEjXCMYCHXUbgwXY+LtGx5jVrXAG6ji+qlrCN5qUmToOjZwO3hoM58=
+  on:
+    tags: true
+    repo: WesTyler/joi-enums-extension

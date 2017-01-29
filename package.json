@@ -25,8 +25,8 @@
     "joi": ">10.x.x"
   },
   "devDependencies": {
-    "code": "^4.0.0",
-    "joi": "^10.2.0",
-    "lab": "^11.2.2"
+    "code": "4.x.x",
+    "joi": "10.x.x",
+    "lab": "12.x.x"
   }
 }

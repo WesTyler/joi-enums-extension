@@ -154,21 +154,85 @@ describe('extensions', () => {
                 rules: [
                     {
                         name: 'integer'
-                    },
-                    {
-                        name: 'map',
-                        arg: {
-                            map: {
-                                a: 1,
-                                b: 2,
-                                c: 3
-                            }
-                        },
-                        description: 'Should map enumerated strings'
                     }
                 ],
                 flags: {
-                    _map: map
+                    map
+                }
+            });
+        });
+    });
+
+    describe('map', () => {
+
+        it('maps string', async () => {
+
+            const schema = Joi.any().map({
+                1: 'mapped'
+            });
+
+            const value = await schema.validate(1);
+
+            expect(value).to.equal('mapped');
+        });
+
+        it('maps objects', async () => {
+
+            const schema = Joi.any().map({
+                1: {
+                    child: true
+                }
+            });
+
+            const value = await schema.validate(1);
+
+            expect(value).to.equal({
+                child: true
+            });
+        });
+
+        it('fails on non-mapped values', async () => {
+
+            const schema = Joi.any().map({
+                1: {
+                    child: true
+                }
+            });
+
+            const error = await expect(schema.validate('other')).to.reject();
+
+            expect(error.message).to.equal('"value" must be one of [1]');
+        });
+
+        it('does not interfere with .any()', async () => {
+
+            const schema = Joi.any();
+
+            const value = await schema.validate(true);
+
+            expect(value).to.equal(true);
+        });
+
+        it('should be described correctly', () => {
+
+            const map = {
+                a: 1,
+                b: 2,
+                c: 3
+            };
+            const schema = Joi.any().map(map);
+
+            expect(schema.describe()).to.equal({
+                type: 'any',
+                options: {
+                    language: {
+                        any: {
+                            map: 'must be one of {{map}}'
+                        }
+                    }
+                },
+                flags: {
+                    map
                 }
             });
         });

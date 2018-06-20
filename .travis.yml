@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-- "8"
-- "9"
-- "10"
-- "node"
+- '8'
+- '9'
+- '10'
+- node
 sudo: false
 before_install: npm install -g npm@5
 deploy:
   provider: npm
   email: wtyler@xogrp.com
   api_key:
-    secure: Mq4cSJA6WbOxJ180QoApxfItA6Jn2UpRQHYqfX9o8hXliIUY4RRCs4FCVvCO4bdq6f6gIHjhmqxvVCo2FL5NDBd5K28CH2rvTbP9PYMnnyTtpbr7GOlzDV0glKYqFRbwQRU7H4P3dWU/sgTDp8AWD49VcpugyAqjJsSrLXqX28I09ABdOuc+vzeGcoN2l1ELcm3xwU+D7h924Aqhs0sF0DlNv+M5z+g7y1x5LzvU6ccvc5hcasPUCC6tLDlNzX4CjmnRDdGm1W7Ckh0kFPOgUGZhBhWsQHeETKIcrIMzpJ0Ij7p9Pc9QNY80Mx3l9Q9kW73Wif9rst7fuwa4tTe0DjRUElRC132qs/GHdKD6NfceVqnrkFQjDUHyLHyRdaBTkVf0XNlqTqF1AF3F+ROj2tRtvMVtwNYnlTz0VCDL/SlO/QJWgyo9bEN19jG/+dKdgtvCcyu97c1kEtFpoYSBq0e97GgEL69jHJqVOCftp0YaYFhMzMs4JRevXj5zibqEN6xAygHtSJTVdBrif/WkrSbEe+nOYS3ibskqg6TWOSjHh7uxcgFZEbPwVBE7+nuPsVkSF1ul/APwbyoMRH4EhPAy1y4vpHSzkUHNB27p4x/wDWRP9z/5uKEjXCMYCHXUbgwXY+LtGx5jVrXAG6ji+qlrCN5qUmToOjZwO3hoM58=
+    secure: b5x/7MbN7r65ycbxT787gwyd8lnNIG5+KaSA4jweWKo1s9sVa896AnZ4bpm26526i59dqg98h6cYSbzyYztjLW9ZX9l2cRv5otapfMZ4qS5TUkOp3ayyx67hlEXbAeSRePpAQ826Dp9nJva8qJJ9f1py+tpI6eHb1zKeVelgNkEIDtXqYI6WJL29Rj4Z5kOd4cQ0h+bZQ3NVWJsgXMKP7pm4u9sHtdTKSUJg/eyIMRly2Oo3qwa9cl0S/KFfPOdC5YWnR/oNtOTYhvs2VOuwO87SnG34eqd8idk5D70Bzj8Z2kIxMqwoQnBNXA8eJPkg00wdwUw1PQDVhSPtvk6uS3JtgxVbUQ0jDQK1WyGuY1zcUt+9eUjnxnlSxzPF9ZEM+YHPK5RnbnVv/B3616a+bw6aqE/SAw6b9WoFG6W2U1cE4lHe5kQAv2qR4GMDY63xnjHgrJtvkrflkIMK3g5AEUZm+t9/v/5gsEIupGqTdrAer8veGQtqvMyJE2Exs2rhzCUsBbv2CeRKTeUneQxBU/ubM+8VuaZcHPPwHsBSSNVGzqpnxWfc+j70sK2ndC1dXSOwAVBoHaU6qPSqT+dGdfVSEz8SMyTfVPedCkfYWIGcUcE/C2NkKkkxsTw/wEQQvEoV1WRbe5H769n4vLSySLBAo93nxpWaY5028B8DSms=
   on:
     tags: true
     repo: WesTyler/joi-enums-extension

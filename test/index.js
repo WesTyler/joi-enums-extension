@@ -59,6 +59,42 @@ describe('enums', () => {
         });
     });
 
+    it('validates when "required"', (done) => {
+
+        const schema = Joi.number().integer().map({
+            a: 1,
+            b: 2,
+            c: 3
+        }).required();
+
+        schema.validate('a', (err, value) => {
+
+            expect(err).to.be.null();
+            expect(value).to.equal(1);
+
+            done();
+        });
+    });
+
+    it('does not interfere with non-map number schema coercion', (done) => {
+
+        const schema = Joi.number();
+
+        schema.validate('3', (err, value) => {
+
+            expect(err).to.be.null();
+            expect(value).to.equal(3);
+
+            schema.validate('nope', (err) => {
+
+                expect(err).to.not.be.null();
+                expect(err.message).to.equal('"value" must be a number');
+
+                done();
+            });
+        });
+    });
+
     it('fails on a non-enumerated string', (done) => {
 
         const schema = Joi.number().integer().map({
@@ -125,11 +161,12 @@ describe('enums', () => {
 
     it('should be described correctly', (done) => {
 
-        const schema = Joi.number().integer().map({
+        const map = {
             a: 1,
             b: 2,
             c: 3
-        });
+        };
+        const schema = Joi.number().integer().map(map);
         expect(schema.describe()).to.equal({
             type: 'number',
             invalids: [Infinity, -Infinity],
@@ -148,7 +185,17 @@ describe('enums', () => {
                     },
                     description: 'Should map enumerated strings'
                 }
-            ]
+            ],
+            flags: {
+                _map: map
+            },
+            options: {
+                language: {
+                    number: {
+                        map: 'must be a number or one of {{enums}}'
+                    }
+                }
+            }
         });
         done();
     });

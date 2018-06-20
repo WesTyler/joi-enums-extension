@@ -1,6 +1,6 @@
 {
   "name": "joi-enums-extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Joi extensions for enums mapping.",
   "main": "lib/index.js",
   "scripts": {

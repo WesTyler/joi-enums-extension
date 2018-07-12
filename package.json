@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/westyler/joi-enums-extension#readme",
   "peerDependencies": {
-    "joi": ">13.x.x"
+    "joi": "13.x.x"
   },
   "devDependencies": {
     "code": "5.x.x",
